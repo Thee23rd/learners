@@ -1,60 +1,99 @@
 import 'package:flutter/material.dart';
 
-void main() {
+void main(){
   runApp(MaterialApp(
-    home: Home()
-
+    home: HomeTab(),
   ));}
 
- class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    return  Scaffold(
-      appBar: AppBar(
-        title: Text("Learners app"),
-        centerTitle: true,
-        backgroundColor: Colors.green[300],
-      ),
+  class HomeTab extends StatelessWidget{
+    @override
+    Widget build(BuildContext contex) {
+      return Scaffold(
+        backgroundColor: Colors.black,
 
-        body: Row(children: <Widget>[
-          Image.asset('assets/pics/chase.png'),
-          Expanded(
-            flex: 4,
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              color: Colors.orange,
-              child: Text("cheese"),
-            ),
-          ),
-          Expanded(
-            flex: 6,
-            child: Container(
-                padding: EdgeInsets.all(20.0),
-              color: Colors.brown,
-              child: Text("cheese"),
-            ),
-          ),
-          Expanded(
-            flex: 5,
-            child: Container(
-                padding: EdgeInsets.all(20.0),
-              color: Colors.blue,
-              child: Text("cheese"),
-            ),
-          ),
-        ],),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {  },
-        child: Text("click"),
-        backgroundColor: Colors.green[300],
+        appBar: AppBar(
+          title: Text('Winners Game'),
+          centerTitle: true,
+          backgroundColor: Colors.black,
+        
         ),
-      ) ;
 
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(20.0, 30.0, 30.0,20.0),
+        
+         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'ZINA',
+              style: TextStyle(
+                color: Colors.green,
+                letterSpacing: 2.0,
+              ),
+            ),
+
+         SizedBox(height: 8.0),
+
+            Text(
+              'Big Harry',
+              style: TextStyle(
+                color: Colors.lightBlue,
+                letterSpacing: 2.0,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold
+              ),),
+             
+              SizedBox(height: 30.0),
+              Text(
+              'Mode',
+              style: TextStyle(
+                color: Colors.green,
+                letterSpacing: 2.0,
+              ),
+            ),
+            
+         SizedBox(height: 8.0),
+
+            Text(
+              'Beast Mode',
+              style: TextStyle(
+                color: Colors.lightBlue,
+                letterSpacing: 2.0,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold
+              ),),
+
+              SizedBox(height: 30.0),
+
+              Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.email,
+                    color: Colors.lightBlue,
+                  ),
+
+              SizedBox(width: 10.0),
+
+                  Text(
+                    'bigharry@beasts.com',
+                    style: TextStyle(
+                      color: Colors.lightBlue,
+                      fontSize: 15,
+                      letterSpacing: 1.0,
+                    ),
+                  )
+                ],
+              )
+              
+            
+          ],
+         ),),
+        
+      );
+    }
   }
 
- }
-
+  
 
 
 
